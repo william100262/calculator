@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: sans-serif;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    background-color: rgb(47,74,71);
+    width: 100%;
+    max-width: 375px;
+    min-height: 640px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.content {
+    width: 100%;
+}
+
+.display {
+    color: white;
+    min-height: 200px;
+    padding: 24px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    flex: 1 1 0%;
+}
+
+.display .input {
+    font-size: 24px;
+    margin-bottom: 8px;
+    overflow-x: auto;
+}
+
+.display .output {
+    font-size: 48px;
+    font-weight: 700;
+    width:100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.display .operator {
+    color: rgb(255,168,134);
+}
+
+.display .brackets,
+.display .percent {
+    color: rgb(162,128,137);
+}
+
+.keys {
+    background-color: rgb(125,199,191);
+    padding: 24px;
+    border-radius: 24px 24px 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 16px;
+    box-shadow: 0px -2px 16px rgba(0, 0, 0, 0.2);
+}
+
+.keys .key {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    height: 0;
+    padding-top: 100%;
+    background-color:rgb(237,247,246);
+    border-radius: 16px;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.keys .key span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.keys .key:hover{
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.keys .key.operator span{
+    color: rgb(255,168,134);
+}
+
+.keys .key.action span {
+    color: rgb(162,128,137);
+}
+
